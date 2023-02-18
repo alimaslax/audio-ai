@@ -21,10 +21,13 @@ RUN apt update && apt install -y --no-install-recommends \
 
 # Install OpenAI Whisper
 RUN python3 -m pip install git+https://github.com/openai/whisper.git 
-RUN whisper --model small.en /data/input/jfk.flac
 
 # Install Youtube scripts
-RUN python3 -m pip install git+https://github.com/alimaslax/audio-ai.git@main#scripts/
+RUN git clone -b main --single-branch https://github.com/alimaslax/audio-ai.git /lib/audio-ai
+RUN python3 -m pip install /lib/audio-ai/scripts
+
+# Test Whisper
+RUN whisper --model small.en /lib/audio-ai/music/input/jfk.flac
 
 # Clone Facebook Demucs
 RUN git clone -b main --single-branch https://github.com/facebookresearch/demucs /lib/demucs
