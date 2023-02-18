@@ -3,8 +3,21 @@ __pycache__/
 *.py[cod]
 *$py.class
 
+# Mac
+.DS_STORE
+
+# 
+
 # vsCode
 .vscode/
+
+# models
+/demucs/models/hub/
+
+# Music
+
+music/ignore
+music/.DS_STORE
 
 # C extensions
 *.so

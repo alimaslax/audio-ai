@@ -11,7 +11,7 @@
         "program": "${file}",
         "console": "integratedTerminal",
         "justMyCode": true,
-        "python": "${env:jupyter}/Users/{USER}/python/jupyter/bin/python"
+        "python": "${env:jupyter}/Users/maslaxali/python/jupyter/bin/python"
       }
     ]
 }
